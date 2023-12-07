@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AdminCenterService} from "../admin-center.service";
 
 @Component({
   selector: 'app-responsable-rayon',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./responsable-rayon.component.css']
 })
 export class ACResponsableRayonComponent {
-
+  constructor(private Service: AdminCenterService) {
+  }
+  deleteResponsableRayon(id: any) {
+    console.log(id)
+  }
 }

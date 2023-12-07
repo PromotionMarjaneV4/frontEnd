@@ -16,4 +16,8 @@ export class AdminCenterService {
   getInfo(){
     return this.actions
   }
+  status='cancelled'
+  getStatus(){
+    return this.status
+  }
 }

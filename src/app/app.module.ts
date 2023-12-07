@@ -22,6 +22,7 @@ import { PromotionComponent } from './ResponsableRayon/promotion/promotion.compo
 import { ProductComponent } from './ResponsableRayon/product/product.component';
 import { AddProductComponent } from './ResponsableRayon/add-product/add-product.component';
 import { EditeProductComponent } from './ResponsableRayon/edite-product/edite-product.component';
+import {ACResponsableRayonComponent} from "./adminCenter/responsable-rayon/responsable-rayon.component";
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { EditeProductComponent } from './ResponsableRayon/edite-product/edite-pr
     AdminCenterComponent,
     AddAdminCenterComponent,
     EditeAdminCenterComponent,
+    ACResponsableRayonComponent,
     RRDashboardComponent,
     PromotionComponent,
     ProductComponent,

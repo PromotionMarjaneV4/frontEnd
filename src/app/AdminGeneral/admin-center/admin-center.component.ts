@@ -9,4 +9,7 @@ import {AdminGeneralService} from "../admin-general.service";
 export class AdminCenterComponent{
   constructor(private Service:AdminGeneralService) {
   }
+  deleteAdminCenter(id: any) {
+    console.log(id)
+  }
 }
