@@ -1,8 +1,8 @@
-import {PromotionModel} from "./promotion.model";
+import {Promotion} from "./promotion.model";
 
-export interface CategoryModel {
+export interface Category {
   id: number
   name: string
   description: string
-  promotion: PromotionModel
+  promotion: Promotion
 }

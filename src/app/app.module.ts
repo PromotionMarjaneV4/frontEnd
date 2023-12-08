@@ -18,7 +18,7 @@ import { AdminCenterComponent } from './AdminGeneral/admin-center/admin-center.c
 import { AddAdminCenterComponent } from './AdminGeneral/add-admin-center/add-admin-center.component';
 import { EditeAdminCenterComponent } from './AdminGeneral/edite-admin-center/edite-admin-center.component';
 import { RRDashboardComponent } from './ResponsableRayon/dashboard/dashboard.component';
-import { PromotionComponent } from './ResponsableRayon/promotion/promotion.component';
+import { PromotionComponent } from './ResponsableRayon/add-promotion/promotion.component';
 import { ProductComponent } from './ResponsableRayon/product/product.component';
 import { AddProductComponent } from './ResponsableRayon/add-product/add-product.component';
 import { EditeProductComponent } from './ResponsableRayon/edite-product/edite-product.component';
