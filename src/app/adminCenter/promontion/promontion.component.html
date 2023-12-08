@@ -22,7 +22,10 @@
                 <p class="antialiased font-sans text-sm text-blue-gray-900 flex items-center justify-between gap-2 font-normal leading-none opacity-70">Promotion</p>
             </th>
             <th class="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50">
-                <p class="antialiased font-sans text-sm text-blue-gray-900 flex items-center justify-between gap-2 font-normal leading-none opacity-70">Date De Debut De Promotion</p>
+                <p class="antialiased font-sans text-sm text-blue-gray-900 flex items-center justify-between gap-2 font-normal leading-none opacity-70">Description</p>
+            </th>
+            <th class="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50">
+              <p class="antialiased font-sans text-sm text-blue-gray-900 flex items-center justify-between gap-2 font-normal leading-none opacity-70">Date De Debut De Promotion</p>
             </th>
             <th class="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50">
                 <p class="antialiased font-sans text-sm text-blue-gray-900 flex items-center justify-between gap-2 font-normal leading-none opacity-70">Date De Fin De Promotion</p>
@@ -36,32 +39,38 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
+        <tr
+          *ngFor="let promotion of promotions"
+          id="promotion{{promotion.id}}"
+        >
             <td class="p-4 border-b border-blue-gray-50">
-                <p class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">23/04/18</p>
+                <p class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">{{promotion.id}}</p>
             </td>
             <td class="p-4 border-b border-blue-gray-50">
-                <p class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">23/04/18</p>
+                <p class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">{{promotion.name}}</p>
             </td>
             <td class="p-4 border-b border-blue-gray-50">
-                <p class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">23/04/18</p>
+                <p class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">{{promotion.name}}</p>
             </td>
             <td class="p-4 border-b border-blue-gray-50">
-                <p class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">23/04/18</p>
+                <p class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">{{promotion.description}}</p>
             </td>
             <td class="p-4 border-b border-blue-gray-50">
-                <p class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">23/04/18</p>
+                <p class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">todo : test</p>
             </td>
             <td class="p-4 border-b border-blue-gray-50">
+              <p class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">todo : test</p>
+            </td>
+            <td style="width: 15rem;" class="p-4 border-b border-blue-gray-50">
                 <div class="w-max">
-                    <div *ngIf="status == 'paid'" class="relative grid items-center font-sans font-bold uppercase whitespace-nowrap select-none bg-green-500/20 text-green-900 py-1 px-2 text-xs rounded-md" style="opacity: 1;">
-                        <span class="">{{status}}</span>
+                    <div *ngIf="promotion.status == 'ACCEPTED'" class="relative grid items-center font-sans font-bold uppercase whitespace-nowrap select-none bg-green-500/20 text-green-900 py-1 px-2 text-xs rounded-md" style="opacity: 1;">
+                        <span class="">{{promotion.status}}</span>
                     </div>
-                    <div *ngIf="status == 'pending'" class="relative grid items-center font-sans font-bold uppercase whitespace-nowrap select-none bg-amber-500/20 text-amber-900 py-1 px-2 text-xs rounded-md" style="opacity: 1;">
-                        <span class="">{{status}}</span>
+                    <div *ngIf="promotion.status == 'PENDING'" class="relative grid items-center font-sans font-bold uppercase whitespace-nowrap select-none bg-amber-500/20 text-amber-900 py-1 px-2 text-xs rounded-md" style="opacity: 1;">
+                        <span class="">{{promotion.status}}</span>
                     </div>
-                    <div *ngIf="status == 'cancelled'" class="relative grid items-center font-sans font-bold uppercase whitespace-nowrap select-none bg-red-500/20 text-red-900 py-1 px-2 text-xs rounded-md" style="opacity: 1;">
-                        <span class="">{{status}}</span>
+                    <div *ngIf="promotion.status == 'REFUSED'" class="relative grid items-center font-sans font-bold uppercase whitespace-nowrap select-none bg-red-500/20 text-red-900 py-1 px-2 text-xs rounded-md" style="opacity: 1;">
+                        <span class="">{{promotion.status}}</span>
                     </div>
                 </div>
             </td>
@@ -74,7 +83,9 @@
                         Edite
                     </button>
                 </a>
-                <button (click)="deletePromotion(1)" class="inline-flex items-center px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-md">
+                <button
+                  (click)="deletePromotionById(promotion.id)"
+                  class="inline-flex items-center px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-md">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                     </svg>

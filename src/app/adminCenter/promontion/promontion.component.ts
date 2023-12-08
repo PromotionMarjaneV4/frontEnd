@@ -1,17 +1,45 @@
-import { Component } from '@angular/core';
-import {AdminCenterService} from "../admin-center.service";
+import {Component, OnInit} from '@angular/core';
+import {PromotionService} from "../../services/promotionService/promotion.service";
 
 @Component({
   selector: 'app-promontion',
   templateUrl: './promontion.component.html',
   styleUrls: ['./promontion.component.css']
 })
-export class PromontionComponent {
-  constructor(private Service: AdminCenterService) {
-  }
-  deletePromotion(id: any) {
-    console.log(id)
+export class PromontionComponent implements OnInit {
+
+  promotions: Array<any> = [];
+  constructor(private service:PromotionService) {
   }
 
-  protected readonly status = this.Service.getStatus();
+  ngOnInit() {
+    this.service.getAllPromotions()
+      .subscribe({
+        next: data => {
+          this.promotions = data
+          console.log(data)
+        },
+        error: err => {
+          console.error(err);
+        }
+      });
+  }
+
+    deletePromotionById(id: any){
+    this.service.deletePromotionById(id)
+      .subscribe({
+        next: () => {
+          console.log("Promotion deleted successfully")
+        },
+        error: err => {
+          console.error(err);
+        }
+      })
+    var promotionId = 'promotion'+id
+    const promotionHTML = document.getElementById(promotionId)
+    if (promotionHTML!=null){
+      promotionHTML.setAttribute('style', 'display:none')
+    }
+  }
+
 }

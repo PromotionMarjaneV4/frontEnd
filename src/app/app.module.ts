@@ -23,6 +23,8 @@ import { ProductComponent } from './ResponsableRayon/product/product.component';
 import { AddProductComponent } from './ResponsableRayon/add-product/add-product.component';
 import { EditeProductComponent } from './ResponsableRayon/edite-product/edite-product.component';
 import {ACResponsableRayonComponent} from "./adminCenter/responsable-rayon/responsable-rayon.component";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -48,10 +50,12 @@ import {ACResponsableRayonComponent} from "./adminCenter/responsable-rayon/respo
     AddProductComponent,
     EditeProductComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
