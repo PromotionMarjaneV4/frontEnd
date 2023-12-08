@@ -29,7 +29,7 @@ export class PromontionComponent implements OnInit {
     this.service.deletePromotionById(id)
       .subscribe({
         next: () => {
-          console.log("Promotion deleted successfully")
+          console.log("PromotionModel deleted successfully")
         },
         error: err => {
           console.error(err);

@@ -28,7 +28,7 @@ export class ACResponsableRayonComponent implements OnInit{
         this.Service.deleteResponsableById(id)
             .subscribe({
                 next: () => {
-                    console.log("Promotion deleted successfully")
+                    console.log("PromotionModel deleted successfully")
                 },
                 error: err => {
                     console.error(err);

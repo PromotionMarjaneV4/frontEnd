@@ -35,14 +35,14 @@ const routes: Routes = [
   {path: 'AC/ResponsableRayon', component: ACResponsableRayonComponent},
   {path: 'AC/AddResponsableRayon', component: AddResponsableRayonComponent},
   {path: 'AC/EditeResponsableRayon/:id', component: EditeResponsableRayonComponent},
-  {path: 'AC/Promotion', component: PromontionComponent},
+  {path: 'AC/PromotionModel', component: PromontionComponent},
   {path: 'AC/AddPromotion', component: AddPromontionComponent},
   {path: 'AC/EditePromotion/:id', component: EditePromontionComponent},
 
   // routes pour Responsable Rayon
   {path: 'RR', component: RRDashboardComponent},
   {path: 'RR/Dashboard', component: RRDashboardComponent},
-  {path: 'RR/Promotion', component: PromotionComponent},
+  {path: 'RR/PromotionModel', component: PromotionComponent},
   {path: 'RR/Product', component: ProductComponent},
   {path: 'RR/AddProduct', component: AddProductComponent},
   {path: 'RR/EditeProduct/:id', component: EditeProductComponent},
