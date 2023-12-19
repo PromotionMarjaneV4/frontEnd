@@ -13,6 +13,10 @@ export class PromontionComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getAllPromotions();
+  }
+
+  getAllPromotions() {
     this.service.getAllPromotions()
       .subscribe({
         next: data => {

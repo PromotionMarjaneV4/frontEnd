@@ -1,0 +1,56 @@
+<div style="margin: 0 1%;">
+  <a href="AC/AddCategories">
+    <button type="button"
+            class="flex justify-center items-center px-4 py-3 bg-blue-600 rounded-md text-white outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transform">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 " viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+      </svg>
+      Add Categories
+    </button>
+  </a>
+</div>
+<div class="p-6 overflow-scroll px-0" style="margin: 0 1%;">
+  <table class="mt-4 w-full min-w-max table-auto text-left">
+    <thead>
+    <tr>
+      <th
+        class="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50">
+        <p
+          class="antialiased font-sans text-sm text-blue-gray-900 flex items-center justify-between gap-2 font-normal leading-none opacity-70">
+          Id Category</p>
+      </th>
+      <th
+        class="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50">
+        <p
+          class="antialiased font-sans text-sm text-blue-gray-900 flex items-center justify-between gap-2 font-normal leading-none opacity-70">
+          Name</p>
+      </th>
+      <th
+        class="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50">
+        <p
+          class="antialiased font-sans text-sm text-blue-gray-900 flex items-center justify-between gap-2 font-normal leading-none opacity-70">
+          Description</p>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr
+      *ngFor="let category of categories"
+      id="category{{category.id}}"
+    >
+      <td class="p-4 border-b border-blue-gray-50">
+        <p
+          class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">{{category.id}}</p>
+      </td>
+      <td class="p-4 border-b border-blue-gray-50">
+        <p
+          class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">{{category.name}}</p>
+      </td>
+      <td class="p-4 border-b border-blue-gray-50">
+        <p
+          class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">{{category.description}}</p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

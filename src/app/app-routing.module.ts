@@ -20,6 +20,8 @@ import {PromotionComponent} from "./ResponsableRayon/add-promotion/promotion.com
 import {ProductComponent} from "./ResponsableRayon/product/product.component";
 import {AddProductComponent} from "./ResponsableRayon/add-product/add-product.component";
 import {EditeProductComponent} from "./ResponsableRayon/edite-product/edite-product.component";
+import {CategoriesComponent} from "./adminCenter/categories/categories.component";
+import {AddCategoriesComponent} from "./adminCenter/add-categories/add-categories.component";
 
 const routes: Routes = [
   // routes pour Admin General
@@ -38,6 +40,8 @@ const routes: Routes = [
   {path: 'AC/PromotionModel', component: PromontionComponent},
   {path: 'AC/AddPromotion', component: AddPromontionComponent},
   {path: 'AC/EditePromotion/:id', component: EditePromontionComponent},
+  {path: 'AC/Categories', component: CategoriesComponent},
+  {path: 'AC/AddCategories', component: AddCategoriesComponent},
 
   // routes pour Responsable Rayon
   {path: 'RR', component: RRDashboardComponent},

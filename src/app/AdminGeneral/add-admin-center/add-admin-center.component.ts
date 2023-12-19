@@ -17,7 +17,7 @@ export class AddAdminCenterComponent implements OnInit{
   }
   ngOnInit(): void {
   }
-  addAdminCenter (adminCenter: { password: string; name: string; email: string }){
+  addAdminCenter(adminCenter: { password: string; name: string; email: string }){
     this.service.addAdminCenter(adminCenter)
       .subscribe({
         next: () => {

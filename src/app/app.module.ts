@@ -25,7 +25,8 @@ import { EditeProductComponent } from './ResponsableRayon/edite-product/edite-pr
 import {ACResponsableRayonComponent} from "./adminCenter/responsable-rayon/responsable-rayon.component";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
-
+import { CategoriesComponent } from './adminCenter/categories/categories.component';
+import { AddCategoriesComponent } from './adminCenter/add-categories/add-categories.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,9 @@ import {FormsModule} from "@angular/forms";
     PromotionComponent,
     ProductComponent,
     AddProductComponent,
-    EditeProductComponent
+    EditeProductComponent,
+    CategoriesComponent,
+    AddCategoriesComponent,
   ],
     imports: [
         BrowserModule,
