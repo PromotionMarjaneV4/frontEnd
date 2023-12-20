@@ -20,10 +20,11 @@ export class AddCategoriesComponent implements OnInit{
   }
 
   addCategory(category: { category: { name: string; description: string } }){
-    console.log("category is " + category)
+    console.log(category)
     this.service.addCategory(category)
       .subscribe({
         next: () => {
+          console.log(category);
         },
         error: err => {
           console.log(err);
