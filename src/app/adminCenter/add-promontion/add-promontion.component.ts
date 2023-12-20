@@ -18,9 +18,9 @@ export class AddPromontionComponent implements OnInit{
     discountPercentage: 0,
     created_at: "",
     ending_at: "",
-    category: [
+    categories: [
       {
-        id:0
+        id: 0
       }
     ]
   }
@@ -44,7 +44,15 @@ export class AddPromontionComponent implements OnInit{
       });
   }
 
-  addPromotion(promotion: { discountPercentage: number; name: string; description: string; status: string }){
+  addPromotion(promotion: {
+    discountPercentage: number;
+    ending_at: string;
+    name: string;
+    description: string;
+    created_at: string;
+    categories: { id: number }[];
+    status: string
+  }){
     console.log(promotion)
     this.service.addPromotion(promotion)
       .subscribe({
