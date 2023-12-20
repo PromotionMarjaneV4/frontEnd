@@ -19,11 +19,12 @@ export class AddCategoriesComponent implements OnInit{
   ngOnInit() {
   }
 
-  addCategory(category: { category: { name: string; description: string } }){
+  addCategory(category: { name: string, description: string }){
     console.log("category is " + category)
     this.service.addCategory(category)
       .subscribe({
-        next: () => {
+        next: data => {
+          console.log(data);
         },
         error: err => {
           console.log(err);
