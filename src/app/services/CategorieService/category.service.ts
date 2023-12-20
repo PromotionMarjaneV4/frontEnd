@@ -13,6 +13,6 @@ export class CategorieService {
   }
   public addCategory(category: any):Observable<any> {
     console.log(category)
-    return this.http.post<any>(`http://localhost:8080/api/v1/categories/create`, category)
+    return this.http.post(`http://localhost:8080/api/v1/categories/create`, category, {responseType: 'text'})
   }
 }
