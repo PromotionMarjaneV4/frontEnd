@@ -8,8 +8,8 @@ import {Observable} from "rxjs";
 export class PromotionService {
 
   constructor(private http:HttpClient) {}
-  public getAllPromotions(page: number = 1, size: number = 10): Observable<Array<any>> {
-    return this.http.get<Array<any>>(`http://localhost:8080/api/v1/promotions`)
+  public getAllPromotions(page: number, size: number){
+    return this.http.get(`http://localhost:8080/api/v1/promotions?page=${page}&size=${size}`, {observe: 'response'})
   }
 
   public deletePromotionById(id: any):Observable<any> {
