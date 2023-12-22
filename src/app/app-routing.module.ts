@@ -16,12 +16,12 @@ import {AdminCenterComponent} from "./AdminGeneral/admin-center/admin-center.com
 import {AddAdminCenterComponent} from "./AdminGeneral/add-admin-center/add-admin-center.component";
 import {EditeAdminCenterComponent} from "./AdminGeneral/edite-admin-center/edite-admin-center.component";
 import {RRDashboardComponent} from "./ResponsableRayon/dashboard/dashboard.component";
-import {PromotionComponent} from "./ResponsableRayon/add-promotion/promotion.component";
+import {PromotionComponent} from "./ResponsableRayon/promotion/promotion.component";
 import {ProductComponent} from "./ResponsableRayon/product/product.component";
 import {AddProductComponent} from "./ResponsableRayon/add-product/add-product.component";
-import {EditeProductComponent} from "./ResponsableRayon/edite-product/edite-product.component";
 import {CategoriesComponent} from "./adminCenter/categories/categories.component";
 import {AddCategoriesComponent} from "./adminCenter/add-categories/add-categories.component";
+import {AddPromotionComponent} from "./ResponsableRayon/add-promotion/add-promotion.component";
 
 const routes: Routes = [
   // routes pour Admin General
@@ -47,10 +47,11 @@ const routes: Routes = [
   {path: 'RR', component: RRDashboardComponent},
   {path: 'RR/Dashboard', component: RRDashboardComponent},
   {path: 'RR/PromotionModel', component: PromotionComponent},
-  {path: 'RR/Product', component: ProductComponent},
   {path: 'RR/AddProduct', component: AddProductComponent},
-  {path: 'RR/EditeProduct/:id', component: EditeProductComponent},
+  {path: 'RR/AddPromotion', component: AddPromotionComponent},
+  {path: 'RR/Produit', component: ProductComponent},
 
+// routes pour Customer
   {path: '', component: HomeComponent},
   {path: 'customer', component: HomeComponent},
   {path: 'customer/home', component: HomeComponent},

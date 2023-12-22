@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class ResponsableRayonService {
   actions: Array<any> = [
     {title: 'Dashboard', "route": "RR/Dashboard",'id':1},
-    {title: 'PromotionModel', "route": "RR/PromotionModel",'id':2},
+    {title: 'Promotion', "route": "RR/PromotionModel",'id':2},
     {title: 'Produit', "route": "RR/Produit",'id':3}
   ];
   constructor() { }

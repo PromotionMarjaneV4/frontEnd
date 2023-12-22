@@ -18,4 +18,8 @@ export class PromotionService {
   public addPromotion(promotion: any):Observable<any> {
     return this.http.post<any>(`http://localhost:8080/api/v1/promotions/create`, promotion)
   }
+
+  statusPromotion(promotion: { id: number; status: string }):Observable<any> {
+    return this.http.put<any>(`http://localhost:8080/api/v1/promotions/updateStatus`, promotion)
+  }
 }

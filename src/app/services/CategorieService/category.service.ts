@@ -15,4 +15,8 @@ export class CategorieService {
     console.log(category)
     return this.http.post(`http://localhost:8080/api/v1/categories/create`, category, {responseType: 'text'})
   }
+
+  deleteCategoryById(id: any) {
+    return this.http.delete(`http://localhost:8080/api/v1/categories/${id}`)
+  }
 }

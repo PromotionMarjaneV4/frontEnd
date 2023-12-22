@@ -18,15 +18,15 @@ import { AdminCenterComponent } from './AdminGeneral/admin-center/admin-center.c
 import { AddAdminCenterComponent } from './AdminGeneral/add-admin-center/add-admin-center.component';
 import { EditeAdminCenterComponent } from './AdminGeneral/edite-admin-center/edite-admin-center.component';
 import { RRDashboardComponent } from './ResponsableRayon/dashboard/dashboard.component';
-import { PromotionComponent } from './ResponsableRayon/add-promotion/promotion.component';
+import { PromotionComponent } from './ResponsableRayon/promotion/promotion.component';
 import { ProductComponent } from './ResponsableRayon/product/product.component';
 import { AddProductComponent } from './ResponsableRayon/add-product/add-product.component';
-import { EditeProductComponent } from './ResponsableRayon/edite-product/edite-product.component';
 import {ACResponsableRayonComponent} from "./adminCenter/responsable-rayon/responsable-rayon.component";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { CategoriesComponent } from './adminCenter/categories/categories.component';
 import { AddCategoriesComponent } from './adminCenter/add-categories/add-categories.component';
+import { AddPromotionComponent } from './ResponsableRayon/add-promotion/add-promotion.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,9 +49,9 @@ import { AddCategoriesComponent } from './adminCenter/add-categories/add-categor
     PromotionComponent,
     ProductComponent,
     AddProductComponent,
-    EditeProductComponent,
     CategoriesComponent,
     AddCategoriesComponent,
+    AddPromotionComponent,
   ],
     imports: [
         BrowserModule,

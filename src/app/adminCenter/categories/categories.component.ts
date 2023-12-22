@@ -28,4 +28,21 @@ export class CategoriesComponent  implements OnInit {
         }
       });
   }
+  deleteCategoryById(id: any) {
+    this.service.deleteCategoryById(id)
+      .subscribe({
+        next: () => {
+          console.log(id);
+          this.getAllcategories();
+        },
+        error: err => {
+          console.error(err);
+        }
+      });
+    var categoryId = 'category'+id
+    const categoryHTML = document.getElementById(categoryId)
+    if (categoryHTML!=null){
+      categoryHTML.setAttribute('style', 'display:none')
+    }
+  }
 }
