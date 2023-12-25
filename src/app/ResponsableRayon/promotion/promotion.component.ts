@@ -13,9 +13,9 @@ export class PromotionComponent implements OnInit {
   currentPage: number = 0;
 
   promotions: Array<Promotion> = [];
-  private promotion: any = {
-    id : 0,
-    status : ''
+  promotion: any = {
+    id: 0,
+    status : ""
   };
   constructor(private service:PromotionService) {
   }
@@ -47,7 +47,7 @@ export class PromotionComponent implements OnInit {
   acceptPromotion(id: number) {
     this.promotion = {
       id: id,
-      status: 'ACCEPTED'
+      status: "ACCEPTED"
     };
     this.service.statusPromotion(this.promotion)
   }
@@ -55,7 +55,7 @@ export class PromotionComponent implements OnInit {
   refusePromotion(id: number) {
     this.promotion = {
       id: id,
-      status: 'REFUSED'
+      status: "REFUSED"
     };
     this.service.statusPromotion(this.promotion)
   }

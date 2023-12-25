@@ -1,6 +1,9 @@
 import {Category} from "./category.model";
 
 export interface Promotion {
+  category: string;
+  quantity: string;
+  price: string;
   id: number
   name: string
   description: string
